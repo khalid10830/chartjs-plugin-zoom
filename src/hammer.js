@@ -132,7 +132,7 @@ export function startHammer(chart, options) {
     mc.on('pinchend', (e) => endPinch(chart, state, e));
   }
 
-  if (panOptions && panOptions.enabled) {
+  if (panOptions) {
     mc.add(new Hammer.Pan({
       threshold: panOptions.threshold,
       enable: createEnabler(chart, state)
